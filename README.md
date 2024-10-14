@@ -41,4 +41,5 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
 - modifico App.vue per fare una chiamata API all'endpoint del progetto Laravel (ignorare il punto successivo poiché quando ho creato il file ProjectCard.vue non avevo effettuato tutti i controlli per la milestone 4)
 - ad un certo punto non avevo più alcun riscontro visivo, ma apparentemente mi è bastato riavviare php artisan serv e npm run dev su laravel-api e un ALTRO npm run dev vite-boolfolio. Infati in quest'ultimo caso è uscito il seguente messaggio: Re-optimizing dependencies because lockfile has changed.
 [Milestone 5]
-- creo il file ProjectCard.vue e lo compilo
+- creo il file ProjectCard.vue e lo compilo e modifico di conseguenza anche App.vue.
+- a parte questa modifica al file README.md non si vedrà alcun cambiamento nei push poiché ho per sbaglio completato la milestone 5 cercando risolvere il problema dell'output visivo della milestone 4. Quindi se ci sono stati troppi pochi push è per via della mia distrazione.
