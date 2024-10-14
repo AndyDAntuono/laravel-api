@@ -37,3 +37,6 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
     - cancello il file HelloWord.vue dalla cartella components
     - resetto il codice di App.vue
 - pubblico vue-boolfolio su github come repo separata da laravel-api
+[Milestone 4]
+- modifico App.vue
+- creo il file ProjectCard.vue e lo compilo
