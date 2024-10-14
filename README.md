@@ -38,5 +38,5 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
     - resetto il codice di App.vue
 - pubblico vue-boolfolio su github come repo separata da laravel-api
 [Milestone 4]
-- modifico App.vue
+- modifico App.vue per fare una chiamata API all'endpoint del progetto Laravel (ignorare il punto successivo poiché quando ho creato il file ProjectCard.vue non avevo effettuato tutti i controlli per la milestone 4)
 - creo il file ProjectCard.vue e lo compilo
