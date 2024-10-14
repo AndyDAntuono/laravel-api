@@ -1,3 +1,5 @@
+NB: dal momento che il seguente esercizio prevede la creazione di due repo che lavorino assieme, copierò ed incollerò il test di questio README.md anche nell'altra repo, in questo caso vue-boolfolio
+
 /*CONSEGNA*/
 
 Esercizio di oggi: Laravel Boolfolio - API
@@ -20,3 +22,18 @@ Bonus: Gestire la paginazione dei risultati
     Route::get('/projects', [App\Http\Controllers\Api\ProjectController::class, 'index']);
 - Testare l'endpoint (http://localhost:8000/api/projects) con Thunderclient assicurarmi che la risposta sia in formato JSON e contenga la lista dei progetti. Inserisco l'endpoint anche nel browser per assicurarmi che mi sia un risultato simile a quello di Thunderclient.
 NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasciato prendere la mano dai test di controllo.... :-P
+[Milestone 3]
+- creo un repo separata intitolata vite-boolfolio seguendo i seguenti passaggi (più che altro li scrivo come promemoria personale):
+    - dal terminale di VSC lancio il comdando npm create vite@latest vite-boolfolio -- --template Vue
+    - lancio il comando cd vite-boolfolio
+    - lancio il comando npm install
+    - lancio il comando run dev
+    - lancio il comando npm install axios
+    - lancio il comando npm add -D sass
+    - lancio il comando npm i bootstrap
+    - cancello il file style.css 
+    - cancello import './style.css' dal file main.js 
+    - creo la cartella scss e al suo interno creo il file generals.scss (dove verranno le classi css pià generiche)
+    - cancello il file HelloWord.vue dalla cartella components
+    - resetto il codice di App.vue
+- pubblico vue-boolfolio su github come repo separata da laravel-api
