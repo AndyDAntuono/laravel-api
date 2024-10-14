@@ -43,3 +43,6 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
 [Milestone 5]
 - creo il file ProjectCard.vue e lo compilo e modifico di conseguenza anche App.vue.
 - a parte questa modifica al file README.md non si vedrà alcun cambiamento nei push poiché ho per sbaglio completato la milestone 5 cercando risolvere il problema dell'output visivo della milestone 4. Quindi se ci sono stati troppi pochi push è per via della mia distrazione.
+[Esecuzione Bonus]
+- modifica il controller Api/ProjectController per restituire i progetti con paginazione.
+- al momento i pulsanti Precedente e Successiva apparentemente non fuonzionano perché al momento risultano solo Progetto 1 e Progetto 2 he sono i due progetti di default risalenti alla repo di laravel-auth
