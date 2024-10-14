@@ -39,4 +39,6 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
 - pubblico vue-boolfolio su github come repo separata da laravel-api
 [Milestone 4]
 - modifico App.vue per fare una chiamata API all'endpoint del progetto Laravel (ignorare il punto successivo poiché quando ho creato il file ProjectCard.vue non avevo effettuato tutti i controlli per la milestone 4)
+- ad un certo punto non avevo più alcun riscontro visivo, ma apparentemente mi è bastato riavviare php artisan serv e npm run dev su laravel-api e un ALTRO npm run dev vite-boolfolio. Infati in quest'ultimo caso è uscito il seguente messaggio: Re-optimizing dependencies because lockfile has changed.
+[Milestone 5]
 - creo il file ProjectCard.vue e lo compilo
