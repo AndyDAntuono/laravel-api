@@ -13,7 +13,7 @@ class ProjectController extends Controller
         $projects = Project::all(); // Recupera tutti i progetti
         
         // Fase di controllo con dd
-        dd($projects); // Controlla che i dati vengano effettivamente recuperati
+        //dd($projects); // Controlla che i dati vengano effettivamente recuperati
         
         return response()->json($projects);
     }

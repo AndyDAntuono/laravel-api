@@ -11,5 +11,12 @@ Bonus: Gestire la paginazione dei risultati
 
 /*SOLUZIONE*/
 
+[Milestone 1]
 - Per prima cosa lancio il comando php artisan make:controller Api/ProjectController per un controller che gestisca le chiamata api
     - aggiorno il controller modificando il metodo index per restituire i progetti in formato JSON.
+    - uso un nell'index per verificare che i dati vengano recuperati correttamente dal database.
+[Milestone 2]
+- Definisco la rotta API nel file routes/api.php scrivendo nello stesso file quanto segue:
+    Route::get('/projects', [App\Http\Controllers\Api\ProjectController::class, 'index']);
+- Testare l'endpoint (http://localhost:8000/api/projects) con Thunderclient assicurarmi che la risposta sia in formato JSON e contenga la lista dei progetti. Inserisco l'endpoint anche nel browser per assicurarmi che mi sia un risultato simile a quello di Thunderclient.
+NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasciato prendere la mano dai test di controllo.... :-P
