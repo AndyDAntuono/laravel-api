@@ -47,3 +47,17 @@ NB: purtroppo ho fatto un push solo per la milestone 1 e 2 perché mi sono lasci
 - modifica il controller Api/ProjectController per restituire i progetti con paginazione.
 - al momento i pulsanti Precedente e Successiva apparentemente non fuonzionano perché al momento risultano solo Progetto 1 e Progetto 2 he sono i due progetti di default risalenti alla repo di laravel-auth
 - per sicurezza ho creato altri 4 a caso poiché il contatore della paginazione conta 5 progetti e superata questo numero, viene creata una nuova pagina dal sesto progetto in poi. Il test ha avuto esito positivo poiché effetivamente si aperta un nuoba pagina per il sesto progetto nella App.vue di vite-boolfolio.
+
+______________________________________________________________________________________________________________________________________________________________________________________________
+
+NB 16-10-24: dal momento che per l'esercizio del 16-10-24 devo lavorare contemporaneamente con due repo (laravel-api e vue-boolfolio) scriverò sia la consegna che soluzione dell'esercizio in  entrambe le repo per sicurezza
+
+/*CONSENGA DEL 16-10-24*/
+
+Continuate a lavorare sulle repo aperte ieri. Create la rotta nel progetto vite boolfolio per visualizzare la pagina di dettaglio di un singolo progetto. Per visualizzare i suoi dati ricordatevi che dovete fare anche un endpoint nel progetto laravel che li recupera tramite lo slug.
+Bonus: realizzare una pagina Not Found da far comparire quando si cerca di accedere ad una pagina che non esiste
+
+/*SOLUZIONE DEL 16-10-24*/
+
+[aggiornamento del backend/larave/laravel-api]
+- nel file api-php aggiungo una rotta che permetta di recuperare i dettagli di un progetto tramite lo slug.
