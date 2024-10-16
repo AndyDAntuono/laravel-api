@@ -13,4 +13,11 @@ class ProjectController extends Controller
         $projects = Project::paginate(5); // Restituisce 5 progetti per pagina
         return response()->json($projects);
     }
+
+    public function show($slug)
+    {
+        $project = Project::where('slug', $slug)->firstOrFail();
+        return response()->json($project);
+    }
+
 }

@@ -61,3 +61,4 @@ Bonus: realizzare una pagina Not Found da far comparire quando si cerca di acced
 
 [aggiornamento del backend/larave/laravel-api]
 - nel file api-php aggiungo una rotta che permetta di recuperare i dettagli di un progetto tramite lo slug.
+- aggiungo il metodo show nel controller ProjectController (quello che gestisce le API) per gestire la richiesta dello slug.
