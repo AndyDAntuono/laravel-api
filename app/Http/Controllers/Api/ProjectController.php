@@ -16,7 +16,12 @@ class ProjectController extends Controller
 
     public function show($slug)
     {
-        $project = Project::where('slug', $slug)->firstOrFail();
+        $project = Project::where('slug', $slug)->first();
+    
+        if (!$project) {
+            return response()->json(['message' => 'Progetto non trovato'], 404); // Restituisce 404
+        }
+    
         return response()->json($project);
     }
 
