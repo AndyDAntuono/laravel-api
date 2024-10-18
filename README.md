@@ -88,3 +88,33 @@ Bonus: realizzare una pagina Not Found da far comparire quando si cerca di acced
 - modifico il componente ProjectDetail.vue per gestire l'errore quando lo slug non corrisponde a un progetto e, in quel caso, mostrare il componente NotFound.
 - modifico il componente ProjectDetail.vue per gestire l'errore quando lo slug non corrisponde a un progetto e, in quel caso, mostrare il componente NotFound.
 - dopo vari tentativi ho ottenuto il seguente risultato: nella pagina di Portfolio.vue ora c'è una barra della ricerca. Se l'utente cerca un progetto esistente, viene "trasportato" nella pagina dettaglio di suddetto progetto. Invece se l'utente cerca un progetto inesistente, egli otterà la pagina notfound.
+
+
+______________________________________________________________________________________________________________________________________________________________________________________________
+
+/*CONSEGNA DEL 17-10-24*/
+
+continuate a lavorare sulle repo dei giorni scorsi implementando l'invio delle mail. Ripercorrete i passaggi visti a lezione, un passo alla volta. Aiutatevi con le slides e la documentazione.
+Bonus 1: Visualizzare i messaggi  di errore.
+Bonus 2: Visualizzare un messaggio di avvenuto invio della mail.
+Bonus 3: Reindirizzare ad una thank you page apposita
+Bonus 4: Personalizzare la mail con altri stili.
+
+/*SOLUZIONE DEò 17-10-24*/
+
+[fase preliminare]
+- mi iscrivo a mailtrap.io
+- vado su Email Testing
+- vado su Inoxes
+- nella scheda My Inbox,  vado nella sezione integration e poi su Code Samples
+- apro il menu a tendina accanto alla voce cURL e seleziono PHP: Laravel 9+
+- copio i seguenti dati:
+    # Looking to send emails in production? Check out our Email API/SMTP product!
+    MAIL_MAILER=smtp
+    MAIL_HOST=sandbox.smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=2004c1cf939539
+    MAIL_PASSWORD=********5653
+- sovrascrivo i dati precedenti con i loro simili nel file env, tranne le ultime due voci, ovvero: 
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
