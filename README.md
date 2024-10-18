@@ -118,3 +118,4 @@ Bonus 4: Personalizzare la mail con altri stili.
 - sovrascrivo i dati precedenti con i loro simili nel file env, tranne le ultime due voci, ovvero: 
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
+- lancio il comando composer require guzzlehttp/guzzle che sarà usato per gestire le richieste HTTP, incluso l'invio di email tramite un'API esterna.
