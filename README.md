@@ -124,3 +124,4 @@ Bonus 4: Personalizzare la mail con altri stili.
 - lancio il comando php artisan make:model Contact per creare l'omonimo modello
 - modifico il modello Contact secondo i miei bisogni
 - crea un Mailable con il comando php artisan make:mail ContactMail. Modifico quest'ultimo secondo i miei bisogni e cambio il dato di default delle voce MAIL_FROM_ADDRESS del file .env in "info@boolfolio.com"
+- apporto delle piccole migliorie in Contact.php e ContactMail.php

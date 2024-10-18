@@ -1,26 +1,19 @@
 <?php
 
-namespace App\Mail;
-
-use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Queue\SerializesModels;
-
 class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
+
+    public $contact; // Aggiungi questa proprietà
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($_contact)
+    public function __construct($contact)
     {
-        $this->contact = $_contact;
+        $this->contact = $contact; // Imposta il contatto passato al costruttore
     }
 
     /**
@@ -58,3 +51,4 @@ class ContactMail extends Mailable
         return [];
     }
 }
+
