@@ -7,6 +7,10 @@ use App\Http\Controllers\Admin\TypeController;
 use App\Http\Controllers\Admin\TechnologyController;
 // test di controllo della relazione tra il modello Technology e Project
 use App\Models\Project;
+// test di controllo dell'invio mail
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
+
 
 /*
 |-------------------------------------------------------------------------- 
@@ -47,6 +51,22 @@ Route::get('/test-many-to-many', function() {
     return $project->technologies;
 });
 
+
+//test di controllo dell'email
+Route::get('/test-email', function () {
+    $details = [
+        'name' => 'Mario',
+        'surname' => 'Rossi',
+        'email' => 'mario.rossi@example.com',
+        'phone' => '1234567890',
+        'content' => 'Questo è un messaggio di prova.'
+    ];
+
+    // Invia la mail
+    Mail::to('destinatario@esempio.com')->send(new ContactMail($details));
+
+    return 'Email di test inviata con successo!';
+});
 
 
 // Rimuovi questa parte di codice, non è necessaria

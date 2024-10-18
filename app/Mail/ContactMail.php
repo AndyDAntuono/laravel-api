@@ -1,5 +1,13 @@
 <?php
 
+namespace App\Mail;  // Aggiungi il namespace corretto
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Mail\Mailable;  // Importa la classe Mailable
+use Illuminate\Mail\Mailables\Envelope;  // Importa la classe Envelope
+use Illuminate\Mail\Mailables\Content;   // Importa la classe Content (se usata)
+use Illuminate\Queue\SerializesModels;
+
 class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
@@ -13,7 +21,9 @@ class ContactMail extends Mailable
      */
     public function __construct($contact)
     {
-        $this->contact = $contact; // Imposta il contatto passato al costruttore
+        $this->contact = $contact; // Assicura che $contact sia popolato correttamente
+         // Aggiungi un controllo per verificare che i dati arrivino correttamente
+        \Log::info('Dati passati a ContactMail:', $contact);
     }
 
     /**
@@ -37,7 +47,7 @@ class ContactMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'email.contact_mail',
+            view: 'email.contact_mail', // Assicurati che esista questa vista
         );
     }
 
@@ -51,4 +61,3 @@ class ContactMail extends Mailable
         return [];
     }
 }
-
