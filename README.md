@@ -119,4 +119,5 @@ Bonus 4: Personalizzare la mail con altri stili.
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
 - lancio il comando composer require guzzlehttp/guzzle che sarà usato per gestire le richieste HTTP, incluso l'invio di email tramite un'API esterna.
-- lancio il comando php artisan make:migration create_contacts_table per creare una tabella per i contatti
+- lancio il comando php artisan make:migration create_contacts_table per creare una tabella per i contatti, ovvero 2024_10_18_152654_create_contacts_table.php
+- modifico 2024_10_18_152654_create_contacts_table.php e lancio il comando php artisan migrate
