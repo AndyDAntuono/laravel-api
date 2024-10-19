@@ -129,3 +129,5 @@ Bonus 4: Personalizzare la mail con altri stili.
 - Sono incappato che non riuscivo a risolvere poi ho capito. Non avevo copiato in modo adeguato la password dal mio account di Mailtrap.
 - lancio il comando php artisan make:controller ContactController per creare un controller che gestisca l'invio dell' email.
     - modifico ContactController secondo i miei bisogni.
+[Bonus 1]
+- modifico il ContactController per gestire gli errori

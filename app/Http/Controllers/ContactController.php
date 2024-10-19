@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;  // Assicurati che questa classe esista
 use App\Models\Contact;  // Il tuo modello Contact
+use Exception;
 
 class ContactController extends Controller
 {
@@ -20,14 +21,20 @@ class ContactController extends Controller
             'content' => 'required|string'
         ]);
 
-        // Crea un nuovo contatto nel database
-        $contact = Contact::create($validatedData);
+        try {
+            // Crea un nuovo contatto nel database
+            $contact = Contact::create($validatedData);
 
-        // Invia l'email usando la Mailable
-        Mail::to('sandbox.smtp.mailtrap.io') // Mi ero dimenicato di modificare l'indirizzo e-mail
-            ->send(new ContactMail($contact));
+            // Invia l'email usando la Mailable
+            Mail::to('your-real-email@mailtrap.io') // Inserisci il tuo indirizzo Mailtrap corretto
+                ->send(new ContactMail($contact));
 
-        // Ritorna una risposta di successo
-        return response()->json(['message' => 'Email inviata con successo!']);
+            // Ritorna una risposta di successo
+            return response()->json(['message' => 'Email inviata con successo!']);
+
+        } catch (Exception $e) {
+            // Gestione degli errori durante l'invio dell'email
+            return response()->json(['error' => 'Errore durante l\'invio dell\'email: ' . $e->getMessage()], 500);
+        }
     }
 }
