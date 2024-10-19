@@ -114,7 +114,7 @@ Bonus 4: Personalizzare la mail con altri stili.
     MAIL_HOST=sandbox.smtp.mailtrap.io
     MAIL_PORT=2525
     MAIL_USERNAME=2004c1cf939539
-    MAIL_PASSWORD=********5653
+    MAIL_PASSWORD=b5917a1a385653
 - sovrascrivo i dati precedenti con i loro simili nel file env, tranne le ultime due voci, ovvero: 
     MAIL_FROM_ADDRESS="hello@example.com"
     MAIL_FROM_NAME="${APP_NAME}"
@@ -127,3 +127,5 @@ Bonus 4: Personalizzare la mail con altri stili.
 - apporto delle piccole migliorie in Contact.php e ContactMail.php
 - aggiungo il file contact.blade.php per creare il template dell'email in resources/views/emails/contact.blade.php.
 - Sono incappato che non riuscivo a risolvere poi ho capito. Non avevo copiato in modo adeguato la password dal mio account di Mailtrap.
+- lancio il comando php artisan make:controller ContactController per creare un controller che gestisca l'invio dell' email.
+    - modifico ContactController secondo i miei bisogni.
