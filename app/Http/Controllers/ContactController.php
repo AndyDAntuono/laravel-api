@@ -24,7 +24,7 @@ class ContactController extends Controller
         $contact = Contact::create($validatedData);
 
         // Invia l'email usando la Mailable
-        Mail::to('your-email@mailtrap.io') // Inserisci il tuo indirizzo email di Mailtrap
+        Mail::to('sandbox.smtp.mailtrap.io') // Mi ero dimenicato di modificare l'indirizzo e-mail
             ->send(new ContactMail($contact));
 
         // Ritorna una risposta di successo
