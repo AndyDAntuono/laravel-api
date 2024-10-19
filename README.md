@@ -126,3 +126,4 @@ Bonus 4: Personalizzare la mail con altri stili.
 - crea un Mailable con il comando php artisan make:mail ContactMail. Modifico quest'ultimo secondo i miei bisogni e cambio il dato di default delle voce MAIL_FROM_ADDRESS del file .env in "info@boolfolio.com"
 - apporto delle piccole migliorie in Contact.php e ContactMail.php
 - aggiungo il file contact.blade.php per creare il template dell'email in resources/views/emails/contact.blade.php.
+- Sono incappato che non riuscivo a risolvere poi ho capito. Non avevo copiato in modo adeguato la password dal mio account di Mailtrap.

@@ -63,10 +63,20 @@ Route::get('/test-email', function () {
     ];
 
     // Invia la mail
-    Mail::to('destinatario@esempio.com')->send(new ContactMail($details));
+    Mail::to('info@boolfolio.com')->send(new ContactMail($details));
 
     return 'Email di test inviata con successo!';
 });
+
+Route::get('/test-tinker-mail', function () {
+    Mail::raw('Test di invio mail', function ($message) {
+        $message->to('info@boolfolio.com')
+                ->subject('Test email');
+    });
+
+    return 'Email inviata con successo!';
+});
+
 
 
 // Rimuovi questa parte di codice, non è necessaria
