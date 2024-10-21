@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\ProjectController;
+use App\Http\Controllers\Api\ContactController; // Assicurati di avere questo controller
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/projects', [App\Http\Controllers\Api\ProjectController::class, 'index']);
+// Rotte per i progetti
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects/{slug}', [ProjectController::class, 'show']);
 
-Route::get('/projects/{slug}', [App\Http\Controllers\Api\ProjectController::class, 'show']);
+// Rotta per inviare il form di contatto
+Route::post('/contact', [ContactController::class, 'sendEmail']);
+

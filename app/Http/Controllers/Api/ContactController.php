@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactMail;  // Assicurati che questa classe esista
-use App\Models\Contact;  // Il tuo modello Contact
+use App\Mail\ContactMail;
+use App\Models\Contact;
 use Exception;
 
 class ContactController extends Controller
@@ -26,14 +27,14 @@ class ContactController extends Controller
             $contact = Contact::create($validatedData);
 
             // Invia l'email usando la Mailable
-            Mail::to('your-real-email@mailtrap.io') // Inserisci il tuo indirizzo Mailtrap corretto
+            Mail::to('sandbox.smtp.mailtrap.io') // Qui se ho capito bene devo usare il mio indirizzo Mailtrap
                 ->send(new ContactMail($contact));
 
-            // Ritorna una risposta di successo
-            return response()->json(['message' => 'Email inviata con successo!']);
+            // Ritorna una risposta di successo con codice HTTP 200
+            return response()->json(['message' => 'Email inviata con successo!'], 200);
 
         } catch (Exception $e) {
-            // Gestione degli errori durante l'invio dell'email
+            // Gestione degli errori e restituisce una risposta JSON con codice 500
             return response()->json(['error' => 'Errore durante l\'invio dell\'email: ' . $e->getMessage()], 500);
         }
     }
