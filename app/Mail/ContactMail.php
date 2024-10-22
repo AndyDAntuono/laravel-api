@@ -23,7 +23,6 @@ class ContactMail extends Mailable
     {
         $this->contact = $contact; // Assicura che $contact sia popolato correttamente
          // Aggiungi un controllo per verificare che i dati arrivino correttamente
-        \Log::info('Dati passati a ContactMail:', $contact);
     }
 
     /**
